@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        form  { display: table;      }
+        p     { display: table-row;  }
+        label { display: table-cell; }
+        input { display: table-cell; }
+    </style>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <p>
+            <label for="uname">User Name</label>
+            <input id="uname" type="text" maxlength="50" name="uname">
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input id="email" type="text" name="mail">
+        </p>
+        <p>
+            <label for="pwd">Password</label>
+            <input id="pwd" type="password" name="pwd">
+        </p>
+        <p>
+            <input type="submit" value="Sign Up">
+        </p>
+    </form>
+    <br>
+    <button onclick="window.location.href = '/login';"> Log In</button>
+</body>
+</html>
